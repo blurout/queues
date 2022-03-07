@@ -1,37 +1,15 @@
 package main
 
-import(
-	"fmt"
+import (
+	"queues/array"
 )
 
-// Queue represents a queue using slice
-type Queue struct {
-	items []int
-}
-
-// Enqueue adds a value at the end
-
-func (q *Queue) Enqueue(n int) {
-	q.items = append(q.items, n)
-}
-
-// Dequeue removes first value FIFO
-
-func (q *Queue) Dequeue() int {
-	remove := q.items[0]
-	q.items = q.items[:1]
-	return remove
-}
-
-func main(){
-	q := Queue{}
-	fmt.Println(q)
+func main() {
+	q := array.Make_Queue()
 	for i := 0; i < 5; i++ {
 		q.Enqueue(i)
 	}
-	fmt.Println(q)
-	q.Dequeue()	
+	q.Print()
 	q.Dequeue()
-	q.Dequeue()
-	fmt.Println(q)
+	q.Print()
 }
