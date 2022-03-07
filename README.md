@@ -1,2 +1,2 @@
 # queues
-Data Structure Series: Queues and queues implementations
+Data Structure Series: Queues and queue implementations
